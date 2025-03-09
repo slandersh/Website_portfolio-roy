@@ -1,95 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="assets/styles/main.css">
 </head>
-<body bgcolor="gray" text="white">
+<body>
+  <header class="fade-in">
+    <h1>Pendaftaran Member Gratis</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="fade-in">Home</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <div class="form-container fade-in">
+    <form action="login.html" method="get" enctype="multipart/form-data">
+      <table>
+        <tr>
+          <td><label for="username"><b>Username:</b></label></td>
+          <td><input type="text" id="username" name="username" required></td>
+        </tr>
+        <tr>
+          <td><label for="email"><b>Email:</b></label></td>
+          <td><input type="email" id="email" name="email" required></td>
+        </tr>
+        <tr>
+          <td><label for="password"><b>Password:</b></label></td>
+          <td><input type="password" id="password" name="password" required></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <fieldset>
+              <legend>Jenis Kelamin</legend>
+              <input type="radio" id="Laki-laki" name="gender" value="Laki-laki" required>
+              <label for="Laki-laki">Laki-laki</label>
+              <input type="radio" id="perempuan" name="gender" value="perempuan">
+              <label for="perempuan">Perempuan</label>
+            </fieldset>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="alamat"><b>Alamat:</b></label></td>
+          <td><textarea id="alamat" name="alamat" rows="4" required></textarea></td>
+        </tr>
+        <tr>
+          <td><label for="dob"><b>Tanggal Lahir:</b></label></td>
+          <td><input type="date" id="dob" name="dob" required></td>
+        </tr>
+        <tr>
+          <td><label for="photo"><b>Upload Foto Profil:</b></label></td>
+          <td><input type="file" id="photo" name="photo" accept="image/*" required></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <button type="submit">Register</button>
+            
+            <button type="reset">Reset</button>
+          </td>
+        </tr>
+      </table>
+    </form>
     <center>
-        <header style="background-color:rgb(71, 69, 69); padding: 15px; text-align: center;">
-            <h1>Pendaftaran Member Gratis</h1>
-            <nav style="display: flex; justify-content: center;">
-                <ul style="list-style: none; padding: 0; margin: 0; display: flex; gap: 15px;">
-                    <li><a href="index.html" style="color: greenyellow; text-decoration: none; font-size: 18px;">Home</a></li>
-                </ul>
-            </nav>
-        </header>
-        <br>
-         <hr width="80%">
-        <main>
-            <form action="login.html" method="get" enctype="multipart/form-data">
-                <table width="80%" cellpadding="10">
-                    <tr>
-                        <td width="30%"><label for="username"><b>Username:</b></label></td>
-                        <td><input type="text" id="username" name="username" size="40" required></td>
-                    </tr>
-                    <tr>
-                        <td><label for="email"><b>Email:</b></label></td>
-                        <td><input type="email" id="email" name="email" size="40" required></td>
-                    </tr>
-                    <tr>
-                        <td><label for="password"><b>Password:</b></label></td>
-                        <td><input type="password" id="password" name="password" size="40" required></td>
-                    </tr>
-                    
-                    <tr>
-                        <td colspan="2">
-                            <fieldset>
-                                <legend>Jenis Kelamin</legend>
-                                <input type="radio" id="Laki-laki" name="gender" value="Laki-laki" required>
-                                <label for="Laki-laki">Laki-laki</label>
-                                <input type="radio" id="perempuan" name="gender" value="perempuan">
-                                <label for="perempuan">Perempuan</label>
-                            </fieldset>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td colspan="2">
-                            <fieldset>
-                                <legend>Kategori</legend>
-                                <select id="pilihan" name="pilihan" required>
-                                    <option value="">Pilihan</option>
-                                    <option value="RPL">Umum</option>
-                                    <option value="TEKKOM">Profesional</option>
-                                </select>
-                            </fieldset>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td><label for="alamat"><b>Alamat:</b></label></td>
-                        <td><textarea id="alamat" name="alamat" rows="4" cols="38" required></textarea></td>
-                    </tr>
-
-                    <tr>
-                        <td><label for="dob"><b>Tanggal Lahir:</b></label></td>
-                        <td><input type="date" id="dob" name="dob" required></td>
-                    </tr>
-
-                    <tr>
-                        <td><label for="photo"><b>Upload Foto Profil:</b></label></td>
-                        <td><input type="file" id="photo" name="photo" accept="image/*" required></td>
-                    </tr>
-
-                    <tr>
-                        <td colspan="2" align="center">
-                            <button type="submit">Register</button>
-                            <button type="reset">Reset</button>
-                        </td>
-                    </tr>
-                </table>
-            </form>
-            <p>Sudah punya akun? <a href="login.html" style="color: lightblue;">Login di sini</a></p>
-        </main>
-        
-        <footer>
-            <hr width="80%">
-            <p><b>contact : roysubagya@upi.edu</b></p>
-        </footer>
+      <p>Sudah punya akun? <a href="login.html">Login di sini</a></p>
     </center>
+  </div>
 
+  <footer class="fade-in">
+    <center><p>Contact: Lorem, ipsum dolor sit amet consectetur.@gmail.com</p></center>
+  </footer>
 </body>
 </html>
